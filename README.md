@@ -7,3 +7,7 @@ A simple Web Based Client for generating Online Personal Portfolio
 - Frontend for Resume PDF maker
 - Flask Backend for the generator
 - using weasyprint for using HTML template to generate PDF Resume
+
+![Frontend image](Images/frontend.jpg)
+
+![Output image](Images/output.jpg)
