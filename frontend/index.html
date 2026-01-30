@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Portfolio Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="left">
+    <h1>Online Portfolio Generator</h1>
+    <p>Create a professional resume in minutes.</p>
+
+    <div class="form">
+
+      <label>Full Name</label>
+      <input id="namefl" placeholder="Name">
+
+      <label>Email</label>
+      <input id="email" placeholder="example@email.com">
+
+      <label>Phone</label>
+      <input id="phone" placeholder="+91 9876543210">
+
+      <label>Professional Summary</label>
+      <textarea id="summary"></textarea>
+
+      <label>Skills (comma separated)</label>
+      <textarea id="skills"></textarea>
+
+      <label>Work Experience</label>
+      <textarea id="experience"></textarea>
+
+      <label>Education</label>
+      <textarea id="education"></textarea>
+
+      <button onclick="generate()">Generate Resume PDF</button>
+
+    </div>
+  </div>
+
+  <div class="right">
+    <h2>What you get</h2>
+    <ul>
+      <li>Modern A4 resume</li>
+      <li>ATS friendly format</li>
+      <li>Instant PDF download</li>
+      <li>Clean professional design</li>
+    </ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

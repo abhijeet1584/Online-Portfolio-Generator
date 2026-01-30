@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    background: #e5e9f0;
+    color: #0f172a;
+}
+
+.page {
+    background: white;
+    padding: 30px;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    padding: 45px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+}
+
+.name {
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.contact {
+    margin-top: 12px;
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+/* SECTIONS */
+.section {
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1e40af;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+/* CONTENT */
+.summary {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background: #f1f5f9;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 6px solid #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.experience, .education {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="header">
+        <div class="name">{{ name }}</div>
+        <div class="contact">
+            {{ email }} • {{ phone }}
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">{{ summary }}</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <ul class="skills-list">
+            {% for s in skills %}
+                <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+        <div class="experience">{{ experience }}</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="education">{{ education }}</div>
+    </div>
+
+</div>
+
+</body>
+</html>
